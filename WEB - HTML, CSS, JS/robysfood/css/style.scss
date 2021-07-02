@@ -1,0 +1,1627 @@
+@import "variables";
+@import "utilities";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-regular;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+#showcase {
+  position: relative;
+  overflow: hidden;
+  .back-image {
+    position: relative;
+    background: url("../img/mancare/food-11.jpg") no-repeat center center /
+      cover;
+    width: 100%;
+    height: 100vh;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0.6;
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      .text {
+        .title {
+          color: white;
+          font-size: 10rem;
+          display: inline-block;
+        }
+
+        .paragraph {
+          color: white;
+          font-size: 3rem;
+          font-family: $font-fancy;
+          margin-bottom: 4rem;
+        }
+        .link {
+          transition: 0.5s;
+          .btn {
+            position: relative;
+            &::after {
+              transition: 0.5s;
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 0;
+            }
+            .btn-text {
+              position: relative;
+              color: white;
+              z-index: 1;
+              font-size: 1.5rem;
+            }
+          }
+          &:hover .btn::after {
+            background: black;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+#section-a {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  .content {
+    display: flex;
+    .text {
+      padding-right: 2rem;
+      margin-left: 1.2rem;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+    .image {
+      border-radius: 40%;
+      margin-right: 4rem;
+      margin-left: 1rem;
+      position: relative;
+      background: url("../img/mancare/food-12.jpg") no-repeat center center /
+        cover;
+      padding-top: 30%;
+      padding-right: 45%;
+      .circle {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: $red;
+        border-radius: 50%;
+        top: -40px;
+        right: -40px;
+        z-index: -1;
+      }
+      .word {
+        position: absolute;
+        font-family: $font-cursive;
+        font-size: 5rem;
+        transform: rotate(30deg);
+        bottom: 0;
+        left: -30px;
+        color: $red;
+      }
+    }
+  }
+}
+
+#section-b {
+  position: relative;
+  z-index: -2;
+  .parallax {
+    background: url("../img/mancare/wine1.png") no-repeat center center / cover;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      height: 100%;
+      width: 100%;
+      background-attachment: fixed;
+      opacity: 0.3;
+      z-index: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 7rem 0;
+      display: flex;
+      justify-content: space-between;
+      .item {
+        max-width: 300px;
+        flex: 1;
+        .image {
+          width: 100%;
+          display: inline-block;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+        .paragraph {
+          color: white;
+          font-size: 1.4rem;
+          text-align: center;
+        }
+      }
+      #item-2 img {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
+//<a href='https://pngtree.com/so/guitar'>guitar png from pngtree.com</a>
+//<a href='https://pngtree.com/so/alcohol'>alcohol png from pngtree.com</a>
+#section-c {
+  padding-bottom: 8rem;
+  .content {
+    padding-left: 2rem;
+    padding-top: 8rem;
+    display: flex;
+    .image {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        background: black;
+      }
+      position: relative;
+      flex: 1;
+      margin-top: 2rem;
+      margin-right: 4rem;
+      margin-left: 1rem;
+      position: relative;
+      background: url("../img/mancare/food-8.jpg") no-repeat center center /
+        cover;
+      padding-top: 35%;
+      padding-right: 35%;
+      .circle {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: $red;
+        border-radius: 50%;
+        top: -60px;
+        left: -60px;
+        z-index: -1;
+      }
+      .cheers {
+        position: absolute;
+        top: -20px;
+        right: 0;
+        transform: rotate(-15deg);
+        background: url("../img/png/cheers.png") no-repeat center center / cover;
+        width: 120px;
+        height: 120px;
+        z-index: 10;
+      }
+      .word {
+        position: absolute;
+        bottom: -40px;
+        right: -20px;
+        font-family: $font-cursive;
+        font-size: 8rem;
+        color: $red;
+        transform: rotate(-30deg);
+      }
+    }
+    .text {
+      flex: 4;
+    }
+  }
+}
+#section-d {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  background: url("../img/png/background1.png") no-repeat center center / cover;
+  background-attachment: fixed;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    background-attachment: fixed;
+    opacity: 0.3;
+  }
+  .content {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    .image {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      background: url("../img/png/eatt.png") no-repeat center center / cover;
+      width: 400px;
+      height: 460px;
+    }
+  }
+}
+#menu {
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  #image-1 {
+    position: absolute;
+    top: -170px;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    .image {
+      position: absolute;
+      left: 120px;
+      background: url("../img/png/bon-apetit.png") no-repeat center center /
+        cover;
+      width: 400px;
+      height: 400px;
+      transform: rotate(20deg);
+    }
+  }
+  #image-2 {
+    position: absolute;
+    top: -220px;
+    right: 0;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    .image {
+      position: absolute;
+      bottom: 20px;
+      right: -100px;
+      background: url("../img/mancare/food2.png") no-repeat center center /
+        cover;
+      width: 600px;
+      height: 420px;
+      transform: rotate(-10deg);
+    }
+  }
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    .title {
+      padding-top: 3rem;
+    }
+    .products {
+      padding-top: 6rem;
+      width: 100%;
+      display: flex;
+      .aliments {
+        padding-left: 4rem;
+        h2 {
+          padding-left: 5rem;
+          padding-bottom: 1rem;
+          padding-top: 1rem;
+        }
+        h3 {
+          padding-left: 0.7rem;
+        }
+        .h3 {
+          padding-left: 3rem !important;
+        }
+        flex: 1;
+        .item {
+          display: flex;
+          .image {
+            padding-left: 1rem;
+            img {
+              border-radius: 50%;
+              width: 80px;
+              height: 80px;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+          .text {
+            padding-left: 1rem;
+            .name {
+              font-size: 1.3rem;
+            }
+            .ingredients {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#section-e {
+  padding-top: 4rem;
+  position: relative;
+  background: url("../img/png/forest1.png") no-repeat center center / cover;
+  background-attachment: fixed;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background: black;
+    background-attachment: fixed;
+  }
+  .content {
+    display: flex;
+    .images {
+      flex: 1;
+      position: relative;
+
+      #image-1 {
+        background: url("../img/atv/atv-1.jpeg") no-repeat center center / cover;
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;
+      }
+      #image-2 {
+        position: relative;
+        transform: translate(200px, -130px);
+        background: url("../img/atv/atv-3.jpeg") no-repeat center center / cover;
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;
+      }
+    }
+    .text {
+      color: white;
+      flex: 1;
+      z-index: 2;
+      margin-left: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-self: center;
+    }
+  }
+}
+#contact {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: rgb(43, 39, 39);
+  color: white;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    .item {
+      &:nth-child(1) {
+        flex: 1.3;
+        margin-left: 1rem;
+        margin-right: 2rem;
+      }
+      &:nth-child(2) {
+        flex: 1;
+      }
+      &:nth-child(3) {
+        flex: 1.5;
+        margin-right: 1rem;
+      }
+      h3 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 1.1rem;
+        padding-bottom: 1rem;
+      }
+      ul {
+        list-style: none;
+        li {
+          i {
+            padding-right: 1rem;
+            padding-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1100px) {
+  #showcase {
+    .back-image {
+      .content {
+        .text {
+          .title {
+            font-size: 8rem;
+          }
+          .paragraph {
+            color: white;
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  #section-a {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 2rem;
+    .content {
+      .text {
+        padding-right: 1rem;
+      }
+      .image {
+        border-radius: 40%;
+        margin-right: 4rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  #section-b {
+    .parallax {
+      padding-left: 2rem;
+      .content {
+        .item {
+          .image {
+            display: inline-block;
+            img {
+              width: 180px;
+              height: 180px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #section-c {
+    padding-bottom: 8rem;
+    .content {
+      padding-left: 2rem;
+      padding-top: 8rem;
+      .image {
+        margin-bottom: 5rem;
+      }
+      .text {
+        padding-right: 3rem;
+      }
+    }
+  }
+  #menu {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    #image-1 {
+      position: absolute;
+      top: -100px;
+      left: -50px;
+      width: 500px;
+      height: 500px;
+      overflow: hidden;
+      .image {
+        position: absolute;
+        left: 120px;
+        background: url("../img/png/bon-apetit.png") no-repeat center center /
+          cover;
+        width: 300px;
+        height: 300px;
+        transform: rotate(20deg);
+      }
+    }
+    #image-2 {
+      position: absolute;
+      top: -180px;
+      right: 0;
+      width: 600px;
+      height: 400px;
+      overflow: hidden;
+      .image {
+        position: absolute;
+        bottom: 20px;
+        right: -100px;
+        background: url("../img/mancare/food2.png") no-repeat center center /
+          cover;
+        width: 400px;
+        height: 320px;
+        transform: rotate(-10deg);
+      }
+    }
+  }
+  .modal {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: white;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 22;
+    .img {
+      width: 100%;
+      height: 40vh;
+    }
+  }
+  #section-e {
+    .content {
+      display: flex;
+      .images {
+        flex: 1;
+        position: relative;
+        padding-left: 3rem;
+        #image-1 {
+          background: url("../img/atv/atv-1.jpeg") no-repeat center center /
+            cover;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+        }
+        #image-2 {
+          position: relative;
+          transform: translate(130px, -90px);
+          background: url("../img/atv/atv-3.jpeg") no-repeat center center /
+            cover;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+        }
+      }
+      .text {
+        margin-right: 4rem;
+      }
+    }
+  }
+  #contact {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    .content {
+      .item {
+        &:nth-child(1) {
+          margin-left: 3rem;
+          margin-right: 2rem;
+        }
+
+        &:nth-child(3) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 780px) {
+  #showcase {
+    position: relative;
+    .back-image {
+      position: relative;
+      background: url("../img/mancare/food-11.jpg") no-repeat center center /
+        cover;
+      width: 100%;
+      height: 100vh;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.6;
+      }
+
+      .content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .text {
+          .title {
+            font-size: 8rem;
+          }
+          .paragraph {
+            color: white;
+            font-size: 2.5rem;
+          }
+          .link {
+            transition: 0.5s;
+            .btn {
+              position: relative;
+              &::after {
+                transition: 0.5s;
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+              }
+              .btn-text {
+                position: relative;
+                color: white;
+                z-index: 1;
+                font-size: 1.5rem;
+              }
+            }
+            &:hover .btn::after {
+              background: black;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  #section-a {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 2rem;
+    .content {
+      display: flex;
+      flex-direction: column;
+      .text {
+        padding-right: 3rem;
+        padding-left: 3rem;
+
+        position: relative;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image {
+        margin-top: 4rem;
+        width: 500px;
+        border-radius: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        background: url("../img/mancare/food-12.jpg") no-repeat center center /
+          cover;
+        padding-top: 30%;
+        padding-right: 45%;
+        .circle {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background: $red;
+          border-radius: 50%;
+          top: -40px;
+          right: -40px;
+          z-index: -1;
+        }
+        .word {
+          position: absolute;
+          font-family: $font-cursive;
+          font-size: 5rem;
+          transform: rotate(30deg);
+          bottom: 0;
+          left: -30px;
+          color: $red;
+        }
+      }
+    }
+  }
+
+  #section-b {
+    position: relative;
+    z-index: -2;
+    .parallax {
+      background: url("../img/mancare/wine.jpg") no-repeat center center / cover;
+      height: 100%;
+      width: 100%;
+      padding-left: 2rem;
+      background-attachment: fixed;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: black;
+        height: 100%;
+        width: 100%;
+        background-attachment: fixed;
+        opacity: 0.3;
+        z-index: 0;
+      }
+      .content {
+        position: relative;
+        z-index: 2;
+        padding: 7rem 0;
+        display: flex;
+        justify-content: space-between;
+        .item {
+          max-width: 300px;
+          flex: 1;
+          .image {
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            img {
+              width: 180px;
+              height: 180px;
+            }
+          }
+          .paragraph {
+            color: white;
+            font-size: 1.4rem;
+          }
+        }
+        #item-2 img {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+  #section-c {
+    padding-bottom: 8rem;
+    .content {
+      padding-left: 2rem;
+      padding-top: 8rem;
+      display: flex;
+      flex-direction: column;
+      .image {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.2;
+          background: black;
+        }
+        width: 500px;
+
+        margin-bottom: 5rem;
+        flex: 1;
+        margin-top: 2rem;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        background: url("../img/mancare/food-8.jpg") no-repeat center center /
+          cover;
+        padding-top: 35%;
+        padding-right: 35%;
+        .circle {
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          background: $red;
+          border-radius: 50%;
+          top: -60px;
+          left: -60px;
+          z-index: -1;
+        }
+        .cheers {
+          position: absolute;
+          top: -20px;
+          right: 0;
+          transform: rotate(-15deg);
+          background: url("../img/png/cheers.png") no-repeat center center /
+            cover;
+          width: 120px;
+          height: 120px;
+          z-index: 10;
+        }
+        .word {
+          position: absolute;
+          bottom: -60px;
+          right: -50px;
+          font-family: $font-cursive;
+          font-size: 8rem;
+          color: $red;
+          transform: rotate(-30deg);
+        }
+      }
+      .text {
+        flex: 4;
+        padding-right: 3rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+      }
+    }
+  }
+  #section-d {
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    background: url("../img/png/background.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      background-attachment: fixed;
+      opacity: 0.3;
+    }
+    .content {
+      position: relative;
+      height: 100%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      .image {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        background: url("../img/png/eatt.png") no-repeat center center / cover;
+        width: 300px;
+        height: 360px;
+      }
+    }
+  }
+  .modal {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: white;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 22;
+    .img {
+      width: 100%;
+      height: 35vh;
+    }
+  }
+  #menu {
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    #image-1 {
+      position: absolute;
+      top: -100px;
+      left: -50px;
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      .image {
+        position: absolute;
+        left: 100px;
+        background: url("../img/png/bon-apetit.png") no-repeat center center /
+          cover;
+        width: 250px;
+        height: 250px;
+        transform: rotate(20deg);
+        opacity: 0.8;
+      }
+    }
+    #image-2 {
+      position: absolute;
+      top: -120px;
+      right: 0;
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      .image {
+        position: absolute;
+        bottom: 20px;
+        right: -50px;
+        background: url("../img/mancare/food2.png") no-repeat center center /
+          cover;
+        width: 320px;
+        height: 250px;
+        transform: rotate(-10deg);
+      }
+    }
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      .title {
+        padding-top: 2rem;
+      }
+      .products {
+        padding-top: 2rem;
+        width: 100%;
+        display: flex;
+        .aliments {
+          padding-left: 4rem;
+          h2 {
+            padding-left: 5rem;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+          }
+          .item {
+            display: flex;
+            .image {
+              padding-left: 1rem;
+              img {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+            .text {
+              padding-left: 1rem;
+              .name {
+                font-size: 1.3rem;
+              }
+              .ingredients {
+                font-size: 0.9rem;
+              }
+            }
+          }
+          &:nth-child(1) {
+            flex: 2;
+          }
+          &:nth-child(2) {
+            flex: 1.2;
+            h2 {
+              padding-left: 0rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #section-e {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    position: relative;
+    background: url("../img/png/forest.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      background: black;
+      background-attachment: fixed;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      .images {
+        flex: 1;
+        display: flex;
+        position: relative;
+        padding-left: 3rem;
+        #image-1 {
+          transform: translate(50px, -50px);
+          background: url("../img/atv/atv-1.jpeg") no-repeat center center /
+            cover;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+        }
+        #image-2 {
+          transform: translate(0, 50px);
+          background: url("../img/atv/atv-3.jpeg") no-repeat center center /
+            cover;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+        }
+      }
+      .text {
+        color: white;
+        flex: 1;
+        z-index: 2;
+        margin-left: 8rem;
+        margin-right: 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+      }
+    }
+  }
+  #contact {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background: rgb(43, 39, 39);
+    color: white;
+    .content {
+      display: grid;
+      grid-template-areas:
+        "contact program"
+        "location location";
+      justify-content: center;
+      text-align: center;
+      .item {
+        margin: 0 1rem;
+        &:nth-child(1) {
+          grid-area: contact;
+        }
+        &:nth-child(2) {
+          grid-area: program;
+        }
+        &:nth-child(3) {
+          margin-top: 2rem;
+          margin-left: 6rem;
+          margin-right: 6rem;
+          grid-area: location;
+        }
+        h3 {
+          font-size: 1.3rem;
+        }
+        p {
+          font-size: 1.1rem;
+          padding-bottom: 2rem;
+        }
+        ul {
+          list-style: none;
+          li {
+            i {
+              padding-right: 1rem;
+              padding-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  #showcase {
+    position: relative;
+    .back-image {
+      position: relative;
+      background: url("../img/mancare/food-11.jpg") no-repeat center center /
+        cover;
+      width: 100%;
+      height: 100vh;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.6;
+      }
+
+      .content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .text {
+          .title {
+            font-size: 4rem;
+          }
+          .paragraph {
+            color: white;
+            font-size: 2rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+          }
+          .link {
+            transition: 0.5s;
+            .btn {
+              position: relative;
+              &::after {
+                transition: 0.5s;
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+              }
+              .btn-text {
+                position: relative;
+                color: white;
+                z-index: 1;
+                font-size: 1.5rem;
+              }
+            }
+            &:hover .btn::after {
+              background: black;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  #section-a {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 0;
+    .content {
+      display: flex;
+      flex-direction: column;
+      .text {
+        padding-right: 0;
+        padding-left: 20px;
+
+        position: relative;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image {
+        margin-top: 4rem;
+        width: 300px;
+        height: 170px;
+        border-radius: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        background: url("../img/mancare/food-12.jpg") no-repeat center center /
+          cover;
+        padding-top: 30%;
+        padding-right: 45%;
+        .circle {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          background: $red;
+          border-radius: 50%;
+          top: -20px;
+          right: -20px;
+          z-index: -1;
+        }
+        .word {
+          position: absolute;
+          font-family: $font-cursive;
+          font-size: 3rem;
+          transform: rotate(30deg);
+          bottom: 0;
+          left: -30px;
+          color: $red;
+        }
+      }
+    }
+  }
+
+  #section-b {
+    position: relative;
+    z-index: -2;
+    .parallax {
+      background: url("../img/mancare/wine.jpg") no-repeat center center / cover;
+      height: 100%;
+      width: 100%;
+      padding-left: 0;
+      background-attachment: fixed;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: black;
+        height: 100%;
+        width: 100%;
+        background-attachment: fixed;
+        opacity: 0.3;
+        z-index: 0;
+      }
+      .content {
+        position: relative;
+        z-index: 2;
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .item {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 250px;
+          flex: 1;
+          .image {
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+            img {
+              width: 180px;
+              height: 180px;
+            }
+          }
+          .paragraph {
+            color: white;
+            font-size: 1.4rem;
+          }
+        }
+        #item-2 img {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+  #section-c {
+    padding-bottom: 8rem;
+    .content {
+      padding-left: 0;
+      padding-top: 8rem;
+      display: flex;
+      flex-direction: column;
+      .image {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.2;
+          background: black;
+        }
+        width: 300px;
+
+        margin-bottom: 5rem;
+        flex: 1;
+        margin-top: 2rem;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        background: url("../img/mancare/food-8.jpg") no-repeat center center /
+          cover;
+        padding-top: 35%;
+        padding-right: 35%;
+        .circle {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          background: $red;
+          border-radius: 50%;
+          top: -30px;
+          left: -30px;
+          z-index: -1;
+        }
+        .cheers {
+          position: absolute;
+          top: -20px;
+          right: 0;
+          transform: rotate(-15deg);
+          background: url("../img/png/cheers.png") no-repeat center center /
+            cover;
+          width: 60px;
+          height: 60px;
+          z-index: 10;
+        }
+        .word {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-family: $font-cursive;
+          font-size: 3rem;
+          color: $red;
+          transform: rotate(-30deg);
+        }
+      }
+      .text {
+        flex: 4;
+        padding-right: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+  #section-d {
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    background: url("../img/png/background.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      background-attachment: fixed;
+      opacity: 0.3;
+    }
+    .content {
+      position: relative;
+      height: 100%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      .image {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        background: url("../img/png/eatt.png") no-repeat center center / cover;
+        width: 300px;
+        height: 360px;
+      }
+    }
+  }
+  .modal {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 22;
+    .img {
+      width: 100%;
+      height: 30vh;
+    }
+  }
+  #menu {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+    #image-1 {
+      position: absolute;
+      top: 100px;
+      left: -50px;
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      .image {
+        position: absolute;
+        left: 100px;
+        background: url("../img/png/bon-apetit.png") no-repeat center center /
+          cover;
+        width: 250px;
+        height: 250px;
+        transform: rotate(20deg);
+        opacity: 0.4;
+      }
+    }
+    #image-2 {
+      display: none;
+      position: absolute;
+      top: -120px;
+      right: 0;
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      .image {
+        position: absolute;
+        bottom: 20px;
+        right: -50px;
+        background: url("../img/mancare/food2.png") no-repeat center center /
+          cover;
+        width: 320px;
+        height: 250px;
+        transform: rotate(-10deg);
+      }
+    }
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      .title {
+        padding-top: 2rem;
+      }
+      .products {
+        padding-top: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .aliments {
+          padding-left: 0;
+          h2 {
+            padding-left: 5rem;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+          }
+          .item {
+            display: flex;
+            .image {
+              padding-left: 1rem;
+              img {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+            .text {
+              padding-left: 1rem;
+              .name {
+                font-size: 1.3rem;
+              }
+              .ingredients {
+                font-size: 0.9rem;
+              }
+            }
+          }
+          &:nth-child(1) {
+            flex: 2;
+          }
+          &:nth-child(2) {
+            flex: 1.2;
+            h2 {
+              padding-left: 4rem;
+            }
+            p {
+              padding-left: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #section-e {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    position: relative;
+    background: url("../img/png/forest.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      background: black;
+      background-attachment: fixed;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      .images {
+        flex: 1;
+        display: flex;
+        position: relative;
+        padding-left: 0;
+
+        #image-1 {
+          transform: translate(20px, -40px);
+          background: url("../img/atv/atv-1.jpeg") no-repeat center center /
+            cover;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+        }
+        #image-2 {
+          transform: translate(-10px, 20px);
+          background: url("../img/atv/atv-3.jpeg") no-repeat center center /
+            cover;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+        }
+      }
+      .text {
+        color: white;
+        flex: 1;
+        z-index: 2;
+        margin-left: 2rem;
+        margin-right: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+      }
+    }
+  }
+  #contact {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background: rgb(43, 39, 39);
+    color: white;
+    .content {
+      display: grid;
+      grid-template-areas:
+        "contact"
+        "program"
+        "location";
+      justify-content: center;
+      text-align: center;
+      .item {
+        margin: 0 1rem;
+        &:nth-child(1) {
+          grid-area: contact;
+          margin-left: 2rem;
+          margin-right: 2rem;
+        }
+        &:nth-child(2) {
+          margin-top: 2rem;
+          grid-area: program;
+        }
+        &:nth-child(3) {
+          margin-top: 2rem;
+          margin-left: 2rem;
+          margin-right: 2rem;
+          grid-area: location;
+        }
+        h3 {
+          font-size: 1.3rem;
+        }
+        p {
+          font-size: 1.1rem;
+          padding-bottom: 2rem;
+        }
+        ul {
+          list-style: none;
+          li {
+            i {
+              padding-right: 1rem;
+              padding-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .fb-link {
+    position: fixed;
+    right: 15px;
+    bottom: 50px;
+    opacity: 0.7;
+    z-index: 30;
+    background: rgb(13, 139, 240);
+    color: white;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    transition: 0.4s;
+    &:hover {
+      opacity: 1;
+      background: rgb(50, 100, 255);
+    }
+  }
+}
