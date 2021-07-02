@@ -1,0 +1,13 @@
+	Factura nr. 12
+
+	Destinatar: Robert
+		Adresa: strada 31
+		Email: rob@yahoo.com1
+		Telefon: 0722
+	Producator: stalinskaya
+	Produs:
+		vodca
+		Pret/buc: 43.90
+		Cantitate: 10
+
+		Pret total: 439.00

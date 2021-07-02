@@ -1,0 +1,13 @@
+	Factura nr. 2
+
+	Destinatar: Claudiu
+		Adresa: adresa
+		Email: claudiu@gmail.com
+		Telefon: 06213
+	Producator: Green farma
+	Produs:
+		salata verde
+		Pret/buc: 5.43
+		Cantitate: 10
+
+		Pret total: 54.30

@@ -1,0 +1,13 @@
+	Factura nr. 13
+
+	Destinatar: Raul
+		Adresa: strada 2
+		Email: raul@yahoo.com
+		Telefon: 12341
+	Producator: nivea1
+	Produs:
+		shampon1
+		Pret/buc: 10.90
+		Cantitate: 10
+
+		Pret total: 109.00
