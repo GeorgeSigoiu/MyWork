@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Joc_de_sah:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Joc_de_sah_jar</output-path>
+    <root id="archive" name="Joc_de_sah.jar">
+      <element id="module-output" name="Joc_de_sah" />
+    </root>
+  </artifact>
+</component>
