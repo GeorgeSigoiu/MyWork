@@ -1,0 +1,1 @@
+Design-ul, ideea si textul acestei pagini web nu sunt ale mele, eu doar am recreat design-ul. Codul html si css este scris in totalitate de mine, pentru javascript m-am ajutat de tutoriale.
