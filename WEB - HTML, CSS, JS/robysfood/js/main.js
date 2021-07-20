@@ -1,22 +1,6 @@
 
-// // Smooth Scrolling
-// $('#navbar a, .btn').on('click', function(event) {
-//   if (this.hash !== '') {
-//     event.preventDefault();
-
-//     const hash = this.hash;
-
-//     $('html, body').animate(
-//       {
-//         scrollTop: $(hash).offset().top - 100
-//       },
-//       800
-//     );
-//   }
-// });
-
-const images=document.querySelectorAll('#menu .content .products .aliments .item .image img');
-const imag=document.querySelector('.modal .img');
+const images = document.querySelectorAll('#menu .content .products .aliments .item .image img');
+const imag = document.querySelector('.modal .img');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const closeModal = function () {
@@ -35,12 +19,21 @@ document.addEventListener('keydown', function (e) {
       closeModal();
   }
 });
-for(let i=0;i<images.length;i++){
-  images[i].addEventListener('click',function(){
+for (let i = 0; i < images.length; i++) {
+  images[i].addEventListener('click', function () {
     openModal();
-    const url=`url('./img/mancare/food-${i+1}.jpg') no-repeat center center / cover`;
-    imag.style.background=url;
+    const url = `url('./img/mancare/food-${i + 1}.jpg') no-repeat center center / cover`;
+    imag.style.background = url;
   });
 }
 
 
+//smooth scroll
+const btn = document.getElementById('scrollToMenu');
+const menu = document.getElementById('menu');
+console.log(menu);
+btn.addEventListener('click', function (e) {
+  e.preventDefault();
+  const coord = menu.getBoundingClientRect();
+  menu.scrollIntoView({ behavior: 'smooth' });
+});

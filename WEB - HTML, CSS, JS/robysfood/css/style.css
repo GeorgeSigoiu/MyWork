@@ -1098,6 +1098,12 @@ a {
   }
   #section-b .parallax .content .item .image {
     display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #section-b .parallax .content .item .image img {
     width: 180px;
