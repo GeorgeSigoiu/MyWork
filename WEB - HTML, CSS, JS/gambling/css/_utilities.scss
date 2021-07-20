@@ -1,0 +1,56 @@
+.form-btn {
+  padding: 5px 10px;
+  border-radius: 0.7rem;
+  font-size: 12px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.current {
+  color: black !important;
+  background: orange !important;
+  p {
+    color: black !important;
+    background: orange !important;
+  }
+}
+.content-page {
+  transition: all 1s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.use-slowshow {
+  transition: all 1s;
+  &:before {
+    content: "";
+    animation: slowshow 1s 0.8s forwards;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+    height: 0;
+    width: 100%;
+    border: 3px double lightgray;
+    border-radius: 20px;
+  }
+}
+@keyframes slowshow {
+  0% {
+    height: 0%;
+    top: 50%;
+  }
+  100% {
+    top: 0;
+    height: 100%;
+  }
+}
+
+@keyframes changepassword {
+  to {
+    height: 100%;
+    top: 0;
+  }
+}

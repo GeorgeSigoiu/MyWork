@@ -1,0 +1,581 @@
+.form-btn {
+  padding: 5px 10px;
+  border-radius: 0.7rem;
+  font-size: 12px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.current {
+  color: black !important;
+  background: orange !important;
+}
+
+.current p {
+  color: black !important;
+  background: orange !important;
+}
+
+.content-page {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.use-slowshow {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.use-slowshow:before {
+  content: "";
+  -webkit-animation: slowshow 1s 0.8s forwards;
+          animation: slowshow 1s 0.8s forwards;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 0;
+  height: 0;
+  width: 100%;
+  border: 3px double lightgray;
+  border-radius: 20px;
+}
+
+@-webkit-keyframes slowshow {
+  0% {
+    height: 0%;
+    top: 50%;
+  }
+  100% {
+    top: 0;
+    height: 100%;
+  }
+}
+
+@keyframes slowshow {
+  0% {
+    height: 0%;
+    top: 50%;
+  }
+  100% {
+    top: 0;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes changepassword {
+  to {
+    height: 100%;
+    top: 0;
+  }
+}
+
+@keyframes changepassword {
+  to {
+    height: 100%;
+    top: 0;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.full-content {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.full-content-login {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 100;
+  text-align: center;
+  background: url("../images/background-login.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.full-content-login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  opacity: 0.5;
+}
+
+.box-login {
+  position: relative;
+  z-index: 19;
+  background: #222;
+  -webkit-box-shadow: 5px 5px 20px 10px;
+          box-shadow: 5px 5px 20px 10px;
+  display: inline-block;
+  top: 35%;
+  padding: 1rem 0.7rem 1rem 0rem;
+}
+
+.box-login .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box-login .content .box-icon {
+  margin: auto;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  height: 120px;
+  width: 120px;
+}
+
+.box-login .content .box-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.box-login .content .box-credentials {
+  text-align: start;
+}
+
+.box-login .content .box-credentials h2 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0.7rem;
+}
+
+.box-login .content .box-credentials input {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 1rem;
+  width: 300px;
+}
+
+.full-content-register {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  text-align: center;
+  background: url("../images/background-register.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  -webkit-transform: translate3d(100vw, -100vh, 0);
+          transform: translate3d(100vw, -100vh, 0);
+}
+
+.full-content-register::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #222;
+  opacity: 0.8;
+}
+
+.box-register {
+  padding: 1rem 2rem 2rem 2rem;
+  top: 20%;
+  font-size: 20px;
+  color: white;
+  position: relative;
+  z-index: 19;
+  display: inline-block;
+}
+
+.box-register::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.3;
+}
+
+.box-register .content {
+  position: relative;
+  z-index: 20;
+}
+
+.box-register .content h2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.box-register .content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box-register .content form .credentials {
+  text-align: start;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.box-register .content form .credentials .label-div {
+  padding-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box-register .content form .credentials .label-div label {
+  margin-bottom: 7px;
+  font-size: 21px;
+}
+
+.box-register .content form .credentials .input-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box-register .content form .credentials .input-div input {
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+
+.box-register .content form .credentials .input-div #age {
+  width: 50px;
+}
+
+.box-register .content form .privacy {
+  margin-top: 1rem;
+}
+
+.box-register .content form .privacy-div {
+  margin-bottom: 1rem;
+}
+
+.box-register .content form .privacy-div input {
+  cursor: pointer;
+}
+
+.box-register .content form .privacy-div label {
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.box-register .content form .privacy-div label span {
+  color: orangered;
+}
+
+.full-content-app {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  margin-left: auto;
+  position: relative;
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.full-content-app .empty {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 70px;
+}
+
+.full-content-app #navigation {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 22;
+  padding-top: 1rem;
+  background: black;
+  display: inline-block;
+  width: 70px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.full-content-app #navigation .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.full-content-app #navigation .nav-list .nav-item {
+  margin-bottom: 1rem;
+  padding-left: 0.7rem;
+  color: orange;
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.full-content-app #navigation .nav-list .nav-item p {
+  position: absolute;
+  top: 20%;
+  left: 70px;
+  font-size: 20px;
+}
+
+.full-content-app .content {
+  position: relative;
+}
+
+.full-content-app .content #content-profile {
+  z-index: 3;
+  background: url("../images/background.jpg") no-repeat center center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.full-content-app .content #content-profile .profile-info {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+  border: 3px double lightgrey;
+}
+
+.full-content-app .content #content-profile .profile-info .avatar {
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.full-content-app .content #content-profile .profile-info .avatar #avatar-image {
+  width: 150px;
+  height: 150px;
+  background: url("../images/avatar1.jpg") no-repeat center center/cover;
+  border-radius: 50%;
+  border: 5px lightgray outset;
+  margin-bottom: 1rem;
+}
+
+.full-content-app .content #content-profile .profile-info .avatar p {
+  font-size: 15px;
+}
+
+.full-content-app .content #content-profile .profile-info .informations {
+  z-index: 10;
+  margin-top: 1.3rem;
+}
+
+.full-content-app .content #content-profile .profile-info .informations h4 {
+  font-size: 25px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .fields {
+  padding: 1rem 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .fields .field {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .fields .field label {
+  font-size: 20px;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .fields .field input {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-size: 15px;
+  padding: 0.4rem;
+  margin-top: 0.3rem;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .fields .field input:focus {
+  outline: none;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  display: none;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields:before {
+  content: "";
+  -webkit-animation: changepassword 1s forwards;
+          animation: changepassword 1s forwards;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 0;
+  height: 0;
+  width: 100%;
+  border: 3px double lightgray;
+  border-radius: 20px;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields .password-field {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields .password-field:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields .password-field label {
+  font-size: 20px;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields .password-field input {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 1px transparent solid;
+  font-size: 15px;
+  padding: 0.3rem;
+  margin-top: 0.3rem;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields .password-field input:focus {
+  outline: none;
+  border: 1px white solid;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields .password-field img {
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields .password-field button {
+  margin-left: auto;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields #alert-password-changed {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.full-content-app .content #content-profile .profile-info .informations .password-fields #alert-password-changed p {
+  font-size: 20px;
+  color: white;
+}
+
+.full-content-app .content #content-deposit {
+  z-index: 1;
+  background: green;
+}
+
+.full-content-app .content #content-dices {
+  z-index: 1;
+  background: red;
+}
+
+.full-content-app .content #content-hilo {
+  z-index: 1;
+  background: cyan;
+}
+
+.full-content-app .content #content-mines {
+  z-index: 1;
+  background: purple;
+}
+
+.full-content-app .content #content-settings {
+  z-index: 1;
+  background: violet;
+}
+/*# sourceMappingURL=style.css.map */

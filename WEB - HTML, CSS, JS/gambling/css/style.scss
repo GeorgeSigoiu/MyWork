@@ -1,0 +1,394 @@
+@import "utilities";
+@import "variables";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+.full-content {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+// LOGIN
+.full-content-login {
+  transition: all 1s;
+  opacity: 100;
+  text-align: center;
+  background: url("../images/background-login.jpg") no-repeat center center /
+    cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    opacity: 0.5;
+  }
+  // transform: translateX(-100vw);
+}
+
+.box-login {
+  position: relative;
+  z-index: 19;
+  background: #222;
+  box-shadow: 5px 5px 20px 10px;
+  display: inline-block;
+  top: 35%;
+  padding: 1rem 0.7rem 1rem 0rem;
+  .content {
+    display: flex;
+    .box-icon {
+      margin: auto;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      height: 120px;
+      width: 120px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .box-credentials {
+      text-align: start;
+      h2 {
+        color: white;
+        font-size: 20px;
+        margin-bottom: 0.7rem;
+      }
+      input {
+        margin-bottom: 0.5rem;
+        display: block;
+        font-size: 1rem;
+        width: 300px;
+      }
+    }
+  }
+}
+// REGISTER
+.full-content-register {
+  transition: all 1s;
+  text-align: center;
+  background: url("../images/background-register.jpg") no-repeat center center /
+    cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #222;
+    opacity: 0.8;
+  }
+  transform: translate3d(100vw, -100vh, 0);
+}
+
+.box-register {
+  padding: 1rem 2rem 2rem 2rem;
+  top: 20%;
+  font-size: 20px;
+  color: white;
+  position: relative;
+  z-index: 19;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.3;
+  }
+  .content {
+    position: relative;
+    z-index: 20;
+    h2 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      .credentials {
+        text-align: start;
+        margin: auto;
+        display: flex;
+
+        flex-direction: row;
+        .label-div {
+          padding-right: 2rem;
+          display: flex;
+          flex-direction: column;
+          label {
+            margin-bottom: 7px;
+            font-size: 21px;
+          }
+        }
+        .input-div {
+          display: flex;
+          flex-direction: column;
+
+          input {
+            font-size: 17px;
+            margin-bottom: 7px;
+          }
+          #age {
+            width: 50px;
+          }
+        }
+      }
+      .privacy {
+        margin-top: 1rem;
+
+        &-div {
+          input {
+            cursor: pointer;
+          }
+          label {
+            font-size: 13px;
+            cursor: pointer;
+            span {
+              color: orangered;
+            }
+          }
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+// APP
+.full-content-app {
+  transition: all 1s;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  margin-left: auto;
+  position: relative;
+  transform: translateY(-100vh);
+  display: flex;
+  .empty {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 70px;
+  }
+  #navigation {
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 22;
+    padding-top: 1rem;
+    background: black;
+    display: inline-block;
+    width: 70px;
+    height: 100vh;
+    overflow: hidden;
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      .nav-item {
+        margin-bottom: 1rem;
+        padding-left: 0.7rem;
+        color: orange;
+        cursor: pointer;
+        display: inline;
+        position: relative;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        p {
+          position: absolute;
+          top: 20%;
+          left: 70px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .content {
+    position: relative;
+    #content-profile {
+      z-index: 3;
+      background: url("../images/background.jpg") no-repeat center center /
+        cover;
+      display: flex;
+      justify-content: center;
+      .profile-info {
+        padding: 2rem;
+        background: rgba($color: #000000, $alpha: 0.6);
+        position: relative;
+        margin: auto;
+        display: flex;
+        border-radius: 20px;
+        border: 3px double lightgrey;
+        .avatar {
+          text-align: center;
+          margin-right: 2rem;
+          #avatar-image {
+            width: 150px;
+            height: 150px;
+            background: url("../images/avatar1.jpg") no-repeat center center /
+              cover;
+            border-radius: 50%;
+            border: 5px lightgray outset;
+            margin-bottom: 1rem;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .informations {
+          z-index: 10;
+          margin-top: 1.3rem;
+          h4 {
+            font-size: 25px;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+          }
+          .fields {
+            padding: 1rem 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            .field {
+              transition: all 1s;
+              opacity: 0;
+              label {
+                font-size: 20px;
+              }
+              input {
+                transition: all 0.4s;
+                &:focus {
+                  outline: none;
+                }
+                font-size: 15px;
+                padding: 0.4rem;
+                margin-top: 0.3rem;
+                border-radius: 10px;
+                border: none;
+                background: transparent;
+                color: white;
+              }
+            }
+          }
+          .password-fields {
+            transition: all 1s;
+            display: none;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            &:before {
+              content: "";
+              animation: changepassword 1s forwards;
+              position: absolute;
+              z-index: -1;
+              top: 50%;
+              left: 0;
+              height: 0;
+              width: 100%;
+              border: 3px double lightgray;
+              border-radius: 20px;
+            }
+            .password-field {
+              transition: all 1s;
+              opacity: 0;
+              &:first-child {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+              }
+              label {
+                font-size: 20px;
+              }
+              input {
+                transition: all 0.4s;
+                border: 1px transparent solid;
+                &:focus {
+                  outline: none;
+                  border: 1px white solid;
+                }
+                font-size: 15px;
+                padding: 0.3rem;
+                margin-top: 0.3rem;
+                border-radius: 10px;
+                background: transparent;
+                color: white;
+              }
+              img {
+                width: 15px;
+                height: 15px;
+                opacity: 0;
+              }
+              button {
+                margin-left: auto;
+              }
+              // #profile-current-password {
+              //   border: 3px red solid;
+              // }
+            }
+            #alert-password-changed{
+              transition: all 1s;
+              opacity: 0;
+              position: absolute;
+              z-index: -1;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              p{
+                font-size: 20px;
+                color: white;
+              }
+            }
+          }
+
+          // button {
+          // }
+        }
+      }
+    }
+    #content-deposit {
+      z-index: 1;
+      background: green;
+    }
+    #content-dices {
+      z-index: 1;
+      background: red;
+    }
+    #content-hilo {
+      z-index: 1;
+      background: cyan;
+    }
+    #content-mines {
+      z-index: 1;
+      background: purple;
+    }
+    #content-settings {
+      z-index: 1;
+      background: violet;
+    }
+  }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/5a450054d9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Gambling</title>
+  </head>
+  <body>
+    <div class="full-content">
+      <!-- LOGIN -->
+      <div class="full-content-login">
+        <div class="box-login">
+          <div class="content">
+            <div class="box-icon">
+              <img src="./images/gambling-icon.png" alt="photo logo" />
+            </div>
+            <div class="box-credentials">
+              <h2>Login</h2>
+              <form class="form form-login">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="username"
+                />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="password"
+                />
+                <button class="form-btn" id="btn-login">LogIn</button>
+                <button class="form-btn" id="btn-register">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- REGISTER -->
+      <div class="full-content-register">
+        <div class="box-register">
+          <div class="content">
+            <h2>Register</h2>
+            <form class="form-register">
+              <div class="credentials">
+                <div class="label-div">
+                  <label for="first-name">First name:</label>
+                  <label for="last-name">Last name:</label>
+                  <label for="age">Age:</label>
+                  <label for="email">Email:</label>
+                  <label for="username">Username:</label>
+                  <label for="password">Password:</label>
+                </div>
+                <div class="input-div">
+                  <input type="text" id="first-name" name="first-name" />
+                  <input type="text" id="last-name" name="last-name" />
+                  <input type="number" id="age" name="age" />
+                  <input type="email" name="email" id="email" />
+                  <input type="text" name="username" id="username-register" />
+                  <input
+                    type="password"
+                    name="password"
+                    id="password-register"
+                  />
+                </div>
+              </div>
+              <div class="privacy">
+                <div class="privacy-div">
+                  <input type="checkbox" name="privacy" id="privacy" />
+                  <label for="privacy">
+                    I agree with the <span>Terms of Services</span> and
+                    <span>Privacy Policy</span>.
+                  </label>
+                </div>
+                <button class="form-btn" id="back-btn">Back</button>
+                <button class="form-btn" id="register-btn">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- APP -->
+      <div class="full-content-app">
+        <div class="empty"></div>
+        <nav id="navigation">
+          <ul class="nav-list">
+            <li class="nav-item current" id="profile">
+              <i class="fas fa-user-circle fa-2x"></i>
+              <p>Profile</p>
+            </li>
+            <li class="nav-item" id="deposit">
+              <i class="fas fa-coins fa-2x"></i>
+              <p>Deposit</p>
+            </li>
+            <li class="nav-item" id="dices">
+              <i class="fas fa-dice fa-2x"></i>
+              <p>Dices</p>
+            </li>
+            <li class="nav-item" id="hilo">
+              <i class="fas fa-sort fa-2x"></i>
+              <p>Hilo</p>
+            </li>
+            <li class="nav-item" id="mines">
+              <i class="fas fa-bomb fa-2x"></i>
+              <p>Mines</p>
+            </li>
+            <li class="nav-item" id="settings">
+              <i class="fas fa-cog fa-2x"></i>
+              <p>Settings</p>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="content">
+          <div class="content-page" id="content-profile">
+            <div class="profile-info">
+              <div class="avatar">
+                <div id="avatar-image"></div>
+                <p>Member from</p>
+                <p class="registration-date"></p>
+              </div>
+
+              <div class="informations">
+                <h4>Account informations</h4>
+                <ul class="fields">
+                  <li class="field">
+                    <label for="name">Name: </label>
+                    <input type="text" id="profile-name" name="name" readonly />
+                  </li>
+                  <li class="field">
+                    <label for="email">E-mail: </label>
+                    <input
+                      type="email"
+                      id="profile-email"
+                      name="email"
+                      readonly
+                    />
+                  </li>
+                  <li class="field">
+                    <label for="phone1">Phone: </label>
+                    <input
+                      type="text"
+                      id="profile-phone"
+                      name="phone"
+                      placeholder="add a phone number"
+                      readonly
+                    />
+                  </li>
+                </ul>
+                <ul class="password-fields" id="password-fields">
+                  <li class="password-field">
+                    <label for="current-password">Change password: </label>
+                    <button class="form-btn" id="save-password">Save</button>
+                  </li>
+                  <li class="password-field">
+                    <input
+                      type="password"
+                      id="profile-current-password"
+                      name="current-password"
+                      placeholder="current password"
+                    />
+                    <img
+                      src="./images/wrong.png"
+                      alt="wrong password"
+                      id="wrong-img"
+                    />
+                  </li>
+                  <li class="password-field">
+                    <input
+                      type="password"
+                      id="profile-new-password"
+                      name="new-password"
+                      placeholder="new password"
+                    />
+                  </li>
+                  <div id="alert-password-changed">
+                    <p>Password has changed!</p>
+                  </div>
+                </ul>
+                <button class="form-btn" id="change-password">
+                  Change password
+                </button>
+                <button class="form-btn" id="modify-info">Modify info</button>
+              </div>
+            </div>
+          </div>
+          <div class="content-page" id="content-deposit">deposit</div>
+          <div class="content-page" id="content-dices">dices</div>
+          <div class="content-page" id="content-hilo">hilo</div>
+          <div class="content-page" id="content-mines">mines</div>
+          <div class="content-page" id="content-settings">settings</div>
+        </div>
+      </div>
+    </div>
+    <!-- script -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
