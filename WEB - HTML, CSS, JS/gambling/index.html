@@ -118,6 +118,7 @@
         </nav>
 
         <div class="content">
+          <!-- Profile -->
           <div class="content-page" id="content-profile">
             <div class="profile-info">
               <div class="avatar">
@@ -189,12 +190,86 @@
                 <button class="form-btn" id="modify-info">Modify info</button>
               </div>
             </div>
+            <div class="empty-space"></div>
           </div>
-          <div class="content-page" id="content-deposit">deposit</div>
-          <div class="content-page" id="content-dices">dices</div>
-          <div class="content-page" id="content-hilo">hilo</div>
-          <div class="content-page" id="content-mines">mines</div>
-          <div class="content-page" id="content-settings">settings</div>
+          <div class="content-page" id="content-deposit">
+            <div class="content"></div>
+            <div class="empty-space"></div>
+          </div>
+          <div class="content-page" id="content-dices">
+            <div class="content"></div>
+            <div class="empty-space"></div>
+          </div>
+          <!-- HiLo -->
+          <div class="content-page" id="content-hilo">
+            <div class="content">
+              <div class="prev-cards-container">
+                <div class="button-slide button-left">
+                  <i class="fas fa-angle-left fa-5x"></i>
+                </div>
+
+                <div class="prev-cards">
+                  <!-- <div class="card">
+                    <img src="./images/cards/card-1.png" alt="" />
+                  </div> -->
+                </div>
+
+                <div class="button-slide button-right">
+                  <i class="fas fa-angle-right fa-5x"></i>
+                </div>
+              </div>
+
+              <div class="start-container_hilo">
+                <div class="start start-btn_hilo">
+                  <div class="background"></div>
+                  start
+                  <div class="letters letters-reset">reset</div>
+                  <div class="letters letters-start">start</div>
+                </div>
+              </div>
+
+              <div class="current-card-container">
+                <div class="current-card">
+                  <div class="cards-left_counter">52</div>
+                  <img id="backcard" src="./images/cards/backcard.png" alt="" />
+                  <img
+                    id="card_position_absolute"
+                    class=""
+                    src="./images/cards/backcard.png"
+                    alt=""
+                  />
+                  <img
+                    id="current__card"
+                    src="./images/cards/transparent.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="buttons">
+                  <div class="button-play button-up">
+                    <i class="fas fa-caret-up fa-5x button-disabled"></i>
+                  </div>
+                  <div class="button-play button-down">
+                    <i class="fas fa-caret-down fa-5x button-disabled"></i>
+                  </div>
+                </div>
+
+                <div class="score_hilo">
+                  Score:
+                  <div class="points_hilo"></div>
+                </div>
+              </div>
+            </div>
+            <div class="empty-space"></div>
+          </div>
+          <div class="content-page" id="content-mines">
+            <div class="content"></div>
+            <div class="empty-space"></div>
+          </div>
+          <div class="content-page" id="content-settings">
+            <div class="content"></div>
+            <div class="empty-space"></div>
+          </div>
         </div>
       </div>
     </div>
