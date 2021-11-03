@@ -13,7 +13,6 @@
         margin-bottom: 1rem;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
-
         border: 5px solid;
         border-image: linear-gradient(
             to top,
@@ -32,17 +31,13 @@
           red,
           transparent
         );
-
         position: relative;
-
         width: 80vw;
         height: 140px;
         display: flex;
-
         overflow: hidden;
         text-align: end;
         align-items: center;
-
         .card {
           text-align: start;
           &:first-child {
@@ -110,17 +105,32 @@
   }
 }
 .start-container_hilo {
+  display: flex;
   text-align: center;
   margin-bottom: 1.4rem;
-  .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #0162c8, #17db31);
-    z-index: -2;
+  .balance {
+    color: black;
+    font-size: 20px;
+    background: rgb(194, 124, 230);
+    border-radius: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+    .coins {
+      margin: auto;
+      text-align: end;
+      background: transparent;
+      color: black;
+      font-size: 20px;
+      padding-right: 10px;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
   }
+
   .start-btn_hilo {
     &::selection {
       color: transparent;
@@ -129,7 +139,8 @@
     position: relative;
     display: inline-block;
     font-size: 18px;
-    margin: 10px 0;
+    // margin: 10px 0;
+    margin: auto;
     text-transform: uppercase;
     padding: 12px 36px;
     cursor: pointer;
@@ -138,6 +149,15 @@
     color: transparent;
     background: transparent;
     overflow: hidden;
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #0162c8, #17db31);
+      z-index: -2;
+    }
     .letters {
       position: absolute;
       text-transform: uppercase;
@@ -153,16 +173,17 @@
         transform: translate(-300px, 0px);
       }
     }
+    span {
+      position: absolute;
+      background: #fff;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      border-radius: 50%;
+      animation: animate 1s linear infinite;
+    }
   }
 }
-span {
-  position: absolute;
-  background: #fff;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  border-radius: 50%;
-  animation: animate 1s linear infinite;
-}
+
 @keyframes animate {
   0% {
     width: 0px;
@@ -190,12 +211,16 @@ span {
     position: relative;
     top: 0;
     bottom: 0;
-    width: 100px;
-    padding-left: 0.5rem;
-
+    width: 50px;
+    padding-left: 10px;
+    margin-left: 7px;
     border: 2px solid grey;
     background: honeydew;
     border-radius: 10px;
     color: black;
+    font-size: 20px;
+    &:focus {
+      outline: none;
+    }
   }
 }
