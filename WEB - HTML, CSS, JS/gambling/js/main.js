@@ -10,12 +10,48 @@ const account1 = {
   phone: "",
   registrationDate: date123.toISOString(),
   avatar: "avatar1.jpg",
+  // money:193400,
+  hiloBestScore:0
 };
 const accounts = [account1];
 
 let currentAccount;
 //elements
 ////////////////////////////////////////////////////////
+const modalOverlay=document.querySelector(".modal-overlay");
+const modalWindowTitle=document.querySelector(".modal-text .modal-title");
+const modalWindowScoreValue=document.querySelector(".modal-text #modal_paragraph1 #value_p1");
+const modalWindowBestScoreValue=document.querySelector(".modal-text #modal_paragraph2 #value_p2");
+// const modalWindowMoneyValue=document.querySelector(".modal-text #modal_paragraph3 #value_p3");
+const modalText=document.querySelector(".modal-text");
+
+const closeModal=function(){
+  setTimeout(()=>{
+    modalOverlay.classList.add('hidden');
+    modalText.classList.add('hidden');
+    modalText.style.top="0";
+  },300);
+  modalText.style.opacity="0";
+  modalOverlay.style.opacity="0";
+};
+
+modalOverlay.addEventListener('click',closeModal);
+
+const showModal=function(title,score,bestScore){
+  modalOverlay.classList.remove("hidden");
+  modalText.classList.remove("hidden");
+  modalWindowScoreValue.textContent=score;
+  modalWindowBestScoreValue.textContent=bestScore;
+  modalWindowTitle.textContent=title;
+  // modalWindowMoneyValue.textContent=money;
+  setTimeout(()=>{
+    modalText.style.top="50%";
+    modalText.style.opacity="1";
+    modalOverlay.style.opacity="1";
+  },10);
+};
+
+//////////////////////////////////////////////////////////
 const defaultAvatar = "default-avatar.jpg";
 
 const inputUsername = document.getElementById("username");
@@ -343,6 +379,9 @@ const prevCardsContainer = document.querySelector(
 const scoreHiloDiv = document.querySelector(
   "#content-hilo .content .score_hilo .points_hilo"
 );
+const balanceHilo=document.querySelector("#content-hilo .content .start-container_hilo .balance .coins");
+const slideRight=document.querySelector("#content-hilo .content .prev-cards-container .button-right");
+const slideLeft=document.querySelector("#content-hilo .content .prev-cards-container .button-left");
 
 let counterCardsLeft = 52;
 let firstTimeClicked = 1;
@@ -351,6 +390,7 @@ let scoreHiloGame=0;
 let allPlayingCardsHilo =[];
 let extractedCards=[];
 let zIndexCard=0;
+let translateHiloCards=0;
 
 const buttonStartHiloClickEvent = function (e) {
   const bodyWidth = document.body.clientWidth;
@@ -389,57 +429,50 @@ const startHiloGame = function () {
     movingCardImg.classList.remove("move-to-current-card");
     curentCardImg.src=extractedCard.src;
   },1010);
-
   buttonDownHilo.classList.remove("button-disabled");
   buttonUpHilo.classList.remove("button-disabled");
-
   startButtonHiloLettersStart.classList.add("letters_animation_start");
   startButtonHiloLettersReset.classList.add("letters_animation_reset");
-
   startButtonHiloLettersStart.classList.remove("letters_animation_start_reverse");
   startButtonHiloLettersReset.classList.remove("letters_animation_reset_reverse");
-
   startButtonHilo.removeEventListener("click", startHiloGame);
   startButtonHilo.addEventListener("click", resetHiloGame);
-
   scoreHiloGame=0;
-  scoreHiloDiv.textContent=0;
+  scoreHiloDiv.value=0;
 };
 ///////////////////
 const resetHiloGame = function () {
   initializeHilo();
   zIndexCard=0;
-  
   startButtonHiloLettersStart.classList.add("letters_animation_start_reverse");
   startButtonHiloLettersReset.classList.add("letters_animation_reset_reverse");
-
-  // startButtonHiloLettersStart.classList.remove("letters_animation_start");
-  // startButtonHiloLettersReset.classList.remove("letters_animation_reset");
-
-  // startButtonHilo.removeEventListener("click", resetHiloGame);
-  // startButtonHilo.addEventListener("click", startHiloGame);
-
-  // scoreHiloDiv.textContent="";
-  // extractedCards=[];
+  const insertedCards=document.querySelectorAll("#content-hilo .content .prev-cards-container .prev-cards .card");
+  insertedCards.forEach(el=>{
+    el.classList.add("prev-card_show-out");
+    el.classList.remove("prev-card_show-in");
+  });
 };
 startButtonHilo.addEventListener("click", startHiloGame);
 
 ///////////////////////////////////////////////////////////////////////////////
+// const displayBalanceHilo=function(){
+//   balanceHilo.value=Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' }).format(currentAccount.money);
+//   balanceHilo.style.width=`${String(balanceHilo.value).length*12}px`;
+// };
+
 const initializeHilo = function () {
   console.log("Initialize HILO");
+  // displayBalanceHilo();
   zIndexCard=0;
-  prevCardsContainer.innerHTML='';
-  scoreHiloDiv.textContent = "";
-
+  setTimeout(()=>{prevCardsContainer.innerHTML='';},1000);
+  scoreHiloDiv.value = "";
   movingCardImg.classList.remove("move-to-current-card");
   movingCardImg.setAttribute("src", "./images/cards/backcard.png");
   curentCardImg.setAttribute("src","./images/cards/transparent.png");
   counterCardsLeft = 52;
   cardsLeftCounter.textContent = counterCardsLeft;
-
   buttonDownHilo.classList.add("button-disabled");
   buttonUpHilo.classList.add("button-disabled");
-
   extractedCards=[];
   allPlayingCardsHilo=[];
   for (let sets = 0; sets < 2; sets++) {
@@ -451,14 +484,11 @@ const initializeHilo = function () {
       allPlayingCardsHilo.push(card);
     }
   }
-
   startButtonHiloLettersStart.classList.remove("letters_animation_start");
   startButtonHiloLettersReset.classList.remove("letters_animation_reset");
-
   startButtonHilo.removeEventListener("click", resetHiloGame);
   startButtonHilo.addEventListener("click", startHiloGame);
-
-  scoreHiloDiv.textContent="";
+  scoreHiloDiv.value="";
   extractedCards=[];
 };
 
@@ -466,6 +496,11 @@ const initializeHilo = function () {
 
 const showPrevCard=function(card){
   prevCardsContainer.insertAdjacentHTML("afterbegin",`<div class="card" style="z-index:${zIndexCard}"><img src="${card.src}" alt="" /></div>`);
+  const insertedCard=document.querySelector("#content-hilo .content .prev-cards-container .prev-cards .card");
+  insertedCard.classList.add("prev-card_show-in");
+  setTimeout(()=>{
+    insertedCard.classList.remove("prev-card_show-in");
+  },1000);
   zIndexCard++;
 };
 const extractAndMoveCard=function(){
@@ -489,7 +524,7 @@ const extractAndMoveCard=function(){
 };
 const updateScoreHilo=function(){
   scoreHiloGame++;
-  scoreHiloDiv.textContent=scoreHiloGame;
+  scoreHiloDiv.value=scoreHiloGame;
   buttonUpHilo.classList.add("button-disabled");
   buttonDownHilo.classList.add("button-disabled");
   setTimeout(function () {
@@ -498,9 +533,10 @@ const updateScoreHilo=function(){
   }, 1000);
 };
 const gameOverHilo=function(){
-  scoreHiloDiv.textContent="game over";
   buttonUpHilo.classList.add("button-disabled");
   buttonDownHilo.classList.add("button-disabled");
+  if(scoreHiloGame>currentAccount.hiloBestScore)currentAccount.hiloBestScore=scoreHiloGame;
+  showModal("Game over!",scoreHiloGame,currentAccount.hiloBestScore);
 };
 const buttonUpHiloEvent = function () {
   const {currentValue,prevValue,lastCard}=extractAndMoveCard();
@@ -523,6 +559,27 @@ const buttonDownHiloClickEvent = function () {
 };
 buttonDownHilo.addEventListener("click", buttonDownHiloClickEvent);
 /////////////////////////////////////////////////////////////////////////////////////
+const getAllCardsHilo=function(){
+  const insertedCards=document.querySelectorAll("#content-hilo .content .prev-cards-container .prev-cards .card");
+  return [...insertedCards];
+};
+const slideCards=function(){
+  const cards=getAllCardsHilo();
+   cards.forEach(el=>{
+      el.classList.remove("prev-card_show-in");
+      el.style.transform=`translateX(${translateHiloCards}px)`;
+    });
+  console.log("click left");
+};
 
+slideLeft.addEventListener('click',function(){
+  translateHiloCards+=200;
+  slideCards();
+});
+
+slideRight.addEventListener('click',function(){
+  translateHiloCards-=200;
+  slideCards();
+});
 ///navbar
 hiloNavItem.addEventListener("click", initializeHilo);

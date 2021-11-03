@@ -12,6 +12,15 @@
     <title>Gambling</title>
   </head>
   <body>
+    <div class="modal-overlay hidden"></div>
+    <div class="modal-text hidden">
+      <h2 class="modal-title">You lost!</h1>
+      <p id="modal_paragraph1" class="modal-paragraph">Your score: <span id="value_p1"></span></p>
+      <p id="modal_paragraph2" class="modal-paragraph">Your best score: <span id="value_p2"></span></p>
+      <!-- <p id="modal_paragraph3" class="modal-paragraph">Money you got: <span id="value_p3"></span></p> -->
+      <!-- <div class="form-btn">close</div> -->
+    </div>
+    
     <div class="full-content">
       <!-- LOGIN -->
       <div class="full-content-login">
@@ -226,6 +235,10 @@
                   <div class="letters letters-reset">reset</div>
                   <div class="letters letters-start">start</div>
                 </div>
+                <!-- <div class="balance">
+                  balance:
+                  <input class="coins" type="text" value="123" readonly />
+                </div> -->
               </div>
 
               <div class="current-card-container">
@@ -253,12 +266,13 @@
                     <i class="fas fa-caret-down fa-5x button-disabled"></i>
                   </div>
                 </div>
-
-                <div class="score_hilo">
-                  Score:
-                  <div class="points_hilo"></div>
-                </div>
-              </div>
+                
+                 <div class="score_hilo">
+                    Score:
+                    <input class="points_hilo" type="text" value="" readonly />
+                  </div>
+                  
+              
             </div>
             <div class="empty-space"></div>
           </div>

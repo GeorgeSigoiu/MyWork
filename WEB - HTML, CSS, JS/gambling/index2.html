@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylee.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#">Button</a>
+    <script type="text/javascript">
+      const startButtonHilo = document.querySelector("a");
+      startButtonHilo.addEventListener("click", function (e) {
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+        console.log(x, y);
+
+        let ripples = document.createElement("span");
+        ripples.style.left = x + "px";
+        ripples.style.top = y + "px";
+        this.appendChild(ripples);
+        setTimeout(() => {
+          ripples.remove();
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
